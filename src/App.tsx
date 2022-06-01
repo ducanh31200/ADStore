@@ -1,13 +1,16 @@
-import { useState } from "react";
-import logo from "./logo.svg";
+import { Toaster } from "react-hot-toast";
 import "./App.css";
+import Router from "./route/route";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <div className=" text-red-600">con cu</div>
+      <Router />
+      <Toaster
+        reverseOrder={false}
+        position="top-right"
+        containerStyle={{ top: 50 }}
+      />
     </div>
   );
 }
